@@ -11,18 +11,8 @@
 %initialize membrane parameters:
 %membrane capacitance per unit area:
 C=1.0      %(muF/cm^2)
-%max possible Na+ conductance per unit area:
-gNabar=120 %((muA/mV)/cm^2)
-%max possible K+ conductance per unit area:
-gKbar=36   %((muA/mV)/cm^2)
-%leakage conductance per unit area:
-gLbar=0.3  %((muA/mV)/cm^2)
-%Na+ equilibrium potential:
-ENa = 45   %(mV)
-%K+ equilibrium potential:
-EK = -82   %(mV)
-%leakage channel reversal potential:
-EL = -59   %(mV)
+%
+traub_parameters
 %
 %initialize time step and experiment duration:
 dt=0.1     %time step duration (ms)
@@ -43,13 +33,13 @@ t_plot=zeros(1,klokmax);
 %voltage prior to t=0:
 vhold=  -70  %(mV)
 %voltage just after t=0:
-vstart= -55  %(mV)
+vstart= -70  %(mV)
 %(change in v is result of current shock applied at t=0)
 %
 %initialize parameters of subsequent current pulse:
-t1p=10       %starting time (ms)
-t2p=11       %stopping time (ms)
-ip=15        %current applied (muA)
+t1p=0       %starting time (ms)
+t2p=tmax       %stopping time (ms)
+ip=1        %current applied (muA)
 %
 %initialize checking parameter
 check=1      %set check=1 to enable self-checking
