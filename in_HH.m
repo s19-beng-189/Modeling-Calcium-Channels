@@ -12,24 +12,25 @@
 %membrane capacitance per unit area:
 C=1.0      %(muF/cm^2)
 %max possible Na+ conductance per unit area:
-gNabar=120 %((muA/mV)/cm^2)
+gNabar=120 %((muA/mV)/cm^2) 120
 %max possible K+ conductance per unit area:
-gKbar=36   %((muA/mV)/cm^2)
+gKbar=36  %((muA/mV)/cm^2) 36
 %leakage conductance per unit area:
-gLbar=0.3  %((muA/mV)/cm^2)
+gLbar=0.3  %((muA/mV)/cm^2) 0.3
 %max possible Ca2+ conductance per unit area:
 gCabar = 0.116; %((muA/mV)/cm^2) 
 %Na+ equilibrium potential:
-ENa = 45   %(mV)
+ENa = 45   %(mV) 45
 %K+ equilibrium potential:
-EK = -82   %(mV)
+EK = -82   %(mV) -82
 %leakage channel reversal potential:
-EL = -59   %(mV)
+EL = -59   %(mV) -59
 %Ca2+ equilibrium potential:
 ECa = 134; %(mV)
 
 %initial Calcium Concentration
-Ca0 = 1.2; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
+Ca0 = 1.0; %induce hypercalcemia
+%mM 1.1-1.35 is normal range of ionized Ca2+ in serum
 %
 %initialize time step and experiment duration:
 dt=0.1     %time step duration (ms)
@@ -56,7 +57,7 @@ vstart= -55  %(mV)
 %initialize parameters of subsequent current pulse:
 t1p=10       %starting time (ms)
 t2p=11       %stopping time (ms)
-ip=0        %current applied (muA)
+ip=0      %current applied (muA)
 %
 %initialize checking parameter
 check=1      %set check=1 to enable self-checking
