@@ -57,16 +57,29 @@ for klok=1:klokmax
   t_plotCa(klok)=t;
 end
 figure(1)
-subplot(2,1,1)
 hold on
-plot(t_plot,v_plot)
-plot(t_plotCa,v_plotCa)
+plot(t_plot,v_plot,'LineWidth',1)
+plot(t_plotCa,v_plotCa,'LineWidth',1)
 title('Voltage vs. Time (no Ca2+)')
 xlabel('Time (ms)')
 ylabel('Voltage (mV)')
 legend('No Ca2+','Ca2+')
-subplot(2,1,2)
+
+figure(2)
+subplot(3,1,1)
 hold on
-plot(t_plot,g_plot);
-plot(t_plotCa,g_plotCa);
-legend('gNa 1','gK1','gNa2','gK2','gCa');
+plot(t_plot,g_plot(1,:),'LineWidth',1);
+plot(t_plotCa,g_plotCa(1,:),'LineWidth',1);
+title('Sodium Conductance');
+legend('gNa no Ca2+','gNa with Ca2+');
+subplot(3,1,2)
+hold on
+plot(t_plot,g_plot(2,:),'LineWidth',1);
+plot(t_plotCa,g_plotCa(2,:),'LineWidth',1);
+title('Potassium Conductance');
+legend('gK no Ca2+','gK with Ca2+');
+subplot(3,1,3)
+hold on
+plot(t_plotCa,g_plotCa(3,:),'LineWidth',1);
+title('Calcium Conductance');
+
