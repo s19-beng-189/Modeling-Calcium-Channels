@@ -18,7 +18,7 @@ gKbar=36   %((muA/mV)/cm^2)
 %leakage conductance per unit area:
 gLbar=0.3  %((muA/mV)/cm^2)
 %max possible Ca2+ conductance per unit area:
-gCabar = 0.116; %((muA/mV)/cm^2) NEED TO FIND
+gCabar = 0.116; %((muA/mV)/cm^2) 
 %Na+ equilibrium potential:
 ENa = 45   %(mV)
 %K+ equilibrium potential:
@@ -26,11 +26,14 @@ EK = -82   %(mV)
 %leakage channel reversal potential:
 EL = -59   %(mV)
 %Ca2+ equilibrium potential:
-ECa = 134; %(mV) NEED TO FIND
+ECa = 134; %(mV)
+
+%initial Calcium Concentration
+Ca0 = 1.2*10; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
 %
 %initialize time step and experiment duration:
 dt=0.1     %time step duration (ms)
-tmax=15    %duration of experiment (ms)
+tmax=50    %duration of experiment (ms)
 %total number of time steps in the experiment:
 klokmax=ceil(tmax/dt)
 %

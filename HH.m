@@ -33,12 +33,13 @@ end
 in_mhnv
 for klok=1:klokmax
   t=klok*dt;                      %note time
-  m=snew(m,alpham(v),betam(v),dt); %update m
+  m=snew(m,alpham(v),betamCa(v,Ca0),dt); %update m
   h=snew(h,alphah(v),betah(v),dt); %update h
   n=snew(n,alphan(v),betan(v),dt); %update n
+  mCa=snew(m,alpham(v),betam(v),dt);
   gNa=gNabar*(m^3)*h;    %sodium conductance
   gK =gKbar*(n^4);    %potassium conductance
-  gCa = gCabar*(m^2);
+  gCa = gCabar*(mCa^2);
   g=gNa+gK+gLbar+gCa;         %total conductance
   gE=gNa*ENa+gK*EK+gLbar*EL+gCa*ECa;         %gE=g*E
   %save old value of v for checking purposes:
