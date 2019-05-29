@@ -29,7 +29,8 @@ EL = -59   %(mV)
 ECa = 134; %(mV)
 
 %initial Calcium Concentration
-Ca0 = 1.2; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
+Ca0 = 1.2*10; %induce hypercalcemia
+%mM 1.1-1.35 is normal range of ionized Ca2+ in serum
 %
 %initialize time step and experiment duration:
 dt=0.1     %time step duration (ms)
