@@ -2,7 +2,6 @@
 %numerical solution of the space-clamped Hodgkin-Huxley equations
 clear all
 clf
-close all
 global check;
 global t1p t2p ip; %parameters for the function izero(t)
 in_HH;
@@ -10,10 +9,10 @@ in_mhnv;
 %Original Action Potential
 for klok=1:klokmax
   t=klok*dt;                      %note time
-  m_Ca=snew(m_Ca,alpham(v),betam(v),dt) %update m
+  m_Na=snew(m_Ca,alpham(v),betam(v),dt) %update m
   h=snew(h,alphah(v),betah(v),dt); %update h
   n=snew(n,alphan(v),betan(v),dt); %update n
-  gNa=gNabar*(m_Ca^3)*h;    %sodium conductance
+  gNa=gNabar*(m_Na^3)*h;    %sodium conductance
   gK =gKbar*(n^4);    %potassium conductance
   g=gNa+gK+gLbar;         %total conductance
   gE=gNa*ENa+gK*EK+gLbar*EL;         %gE=g*E
