@@ -11,7 +11,7 @@
 %initialize membrane parameters:
 
 %initial Calcium Concentration
-Ca0 = 0.5; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
+Ca0 = 5; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
 %membrane capacitance per unit area:
 C=1.0;      %(muF/cm^2)
 %max possible Na+ conductance per unit area:
@@ -29,13 +29,12 @@ EK = -82;   %(mV)
 %leakage channel reversal potential:
 EL = -59;   %(mV)
 %Ca2+ equilibrium potential:
-ECa_o = 134; %mV, typical calcium equilibrium potential in neuron cell
-ECa = -61/2*log10(Ca0/0.0001); %(mV), 134mV is the equlibrium potential when [Ca]i = 0.0001mM,[Ca]o = 2.5 mM
+ECa = -134%-61/2*log10(Ca0/0.0001); %(mV), 134mV is the equlibrium potential when [Ca]i = 0.0001mM,[Ca]o = 2.5 mM
 
 %
 %initialize time step and experiment duration:
 dt=0.1;     %time step duration (ms)
-tmax=20;    %duration of experiment (ms)
+tmax=50;    %duration of experiment (ms)
 %total number of time steps in the experiment:
 klokmax=ceil(tmax/dt);
 %
