@@ -52,11 +52,11 @@ t_plot=zeros(1,klokmax);
 %voltage prior to t=0:
 vhold=  -70;  %(mV)
 %voltage just after t=0:
-vstart= -70;  %(mV)
+vstart= -55;  %(mV)
 %(change in v is result of current shock applied at t=0)
 %
 %initialize parameters of subsequent current pulse:
-t1p=1;       %starting time (ms)
+t1p=0;       %starting time (ms)
 t2p=100;       %stopping time (ms)
 ip=15;        %current applied (muA)
 %
