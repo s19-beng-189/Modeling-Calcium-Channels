@@ -94,7 +94,7 @@ hold on
 plot(t_plotCa,g_plotCa(3,:),'LineWidth',2);
 title('Calcium Conductance');
 
-figure(3)
+figure(4)
 subplot(2,1,1)
 hold on
 plot(t_plot, mhn_plot_O(1,:), 'LineWidth', 2);
