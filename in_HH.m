@@ -34,12 +34,13 @@ ECa = 61/2*log10(Ca0/0.0001); %(mV), 134mV is the equlibrium potential when [Ca]
 %
 %initialize time step and experiment duration:
 dt=0.1;     %time step duration (ms)
-tmax=50;    %duration of experiment (ms)
+tmax=100;    %duration of experiment (ms)
 %total number of time steps in the experiment:
 klokmax=ceil(tmax/dt);
 %
 %initialize arrays that hold data for plotting:
 mhn_plot=zeros(3,klokmax);
+mmhn_plot=zeros(4,klokmax);
 v_plot=zeros(1,klokmax);
 t_plot=zeros(1,klokmax);
 %
@@ -51,13 +52,13 @@ t_plot=zeros(1,klokmax);
 %voltage prior to t=0:
 vhold=  -70;  %(mV)
 %voltage just after t=0:
-vstart= -55;  %(mV)
+vstart= -70;  %(mV)
 %(change in v is result of current shock applied at t=0)
 %
 %initialize parameters of subsequent current pulse:
-t1p=10;       %starting time (ms)
-t2p=11;       %stopping time (ms)
-ip=0;        %current applied (muA)
+t1p=1;       %starting time (ms)
+t2p=100;       %stopping time (ms)
+ip=15;        %current applied (muA)
 %
 %initialize checking parameter
 check=1;     %set check=1 to enable self-checking
