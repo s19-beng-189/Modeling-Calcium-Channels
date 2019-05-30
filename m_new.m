@@ -2,7 +2,7 @@ function s=m_new(s_old,alpha,beta,dt)
 %filename: snew.m
 global check;
 %initial Calcium Concentration
-Ca0 = 5; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
+Ca0 = 0.5; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
 %fraction of Na channels inhibited by calcium:
 f = (0.4651*log((0.574*Ca0.^(0.4071))+0.2874))+0.2951;
 s=(s_old+(dt*alpha*(1-f)))/(1+dt*(alpha+beta));

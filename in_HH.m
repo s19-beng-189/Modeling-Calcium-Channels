@@ -11,7 +11,7 @@
 %initialize membrane parameters:
 
 %initial Calcium Concentration
-Ca0 = 5; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
+Ca0 = 0.5; %mM 1.1-1.35 is normal range of ionized Ca2+ in serum
 %membrane capacitance per unit area:
 C=1.0;      %(muF/cm^2)
 %max possible Na+ conductance per unit area:
