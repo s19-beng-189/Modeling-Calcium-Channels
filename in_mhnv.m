@@ -19,7 +19,7 @@ f = (0.4651*log((0.574*Ca0.^(0.4071))+0.2874))+0.2951;
 f_shift = (0.4651*log((0.574*(1.2)^(0.4071))+0.2874))+0.2951;
 %set m,h,n equal to their steady values
 %under constant-v conditions:
-m_Na=alpham(v)/(alpham(v)+betam(v))*(1-f);
+m_Na=alpham(v)/(alpham(v)+betam(v))*(1+f_shift-f);
 m_Ca=alpham(v)/(alpham(v)+betam(v));
 h=alphah(v)/(alphah(v)+betah(v));
 n=alphan(v)/(alphan(v)+betan(v));
